@@ -53,18 +53,18 @@ $(document).ready(function() {
                             </tr>
                         </thead>
                         <tbody>
-                             <%for(model.Categoria cat:dao.CategoriaDAO.listar()){%>
+                            <%-- <%for(model.Cliente Cli:dao.CategoriaDAO.listar()){%> 
                              <tr>
-                                 <td width='5'><%= cat.getIdcategoria()%></td>
-                                 <td width='5'><%= cat.getCategoria()%></td>
-                                 <td width='5'><%= cat.getObservacion()%></td>
+                                 <td width='5'><%= Cli.getCod_cliente()%></td>
+                                 <td width='5'><%= Cli.getNombres() %></td>
+                                
                              
                                  
                             
                              </tr>
                              
                             
-                            <%}%>
+                            <%}%>  --%>
                         </tbody>
                     </table>
                 </div>
@@ -74,7 +74,7 @@ $(document).ready(function() {
                  <div class="col-lg-8">
               <!-- Button trigger modal -->
                 <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-                  Registrar Nueva Categoría
+                  Registrar Nueva Cliente
                 </button>
                  </div>
              </div>
@@ -92,16 +92,16 @@ $(document).ready(function() {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Registrar Categorías</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Registrar Cliente</h5>
          </div>
       <div class="modal-body">
         <!-- 4:3 aspect ratio -->
                 <div class="embed-responsive embed-responsive-4by3">
-                  <iframe class="embed-responsive-item" src="registrarcategoria.jsp"></iframe>
+                    <iframe class="embed-responsive-item" src="RegistrarCliente.jsp"></iframe>
                 </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-info" data-dismiss="modal" onclick= "self.location.href = 'listarcategorias.jsp'">Salir de la ventana modal</button>
+        <button type="button" class="btn btn-info" data-dismiss="modal" onclick= "self.location.href = 'ListarCliente.jsp'">Salir de la ventana modal</button>
         <!--<button type="button" class="btn btn-primary">Save changes</button>-->
       </div>
     </div>
