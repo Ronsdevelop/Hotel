@@ -159,16 +159,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <%for (model.Niveles car : dao.NivelDAO.listarniveles()) {%>
+                                <%for (model.Niveles niv : dao.NivelDAO.listarniveles()) {%>
                                 <tr>
-                                    <td width='5'><%= car.getCod_nivel()%></td>
-                                    <td width='5'><%= car.getNom_nivel()%></td>
+                                    <td width='5'><%= niv.getCod_nivel()%></td>
+                                    <td width='5'><%= niv.getNom_nivel()%></td>
                                     <td>
-                                        <a href="Servleteliminarcargo?cod=<%= car.getCod_nivel()%>">
+                                        <a href="Servleteliminarnivel?cod=<%= niv.getCod_nivel()%>">
                                         <input type="submit" value="Eliminar"
                                                class="btn btn-danger btn-sm"></a>
                                         &nbsp;&nbsp;
-                                        <a href="modificarcargo.jsp?cod=<%= car.getCod_nivel()%>">
+                                        <a href="modificarnivel.jsp?cod=<%= niv.getCod_nivel()%>">
                                         <input type="submit" value="Modificar"
                                                class="btn btn-success btn-sm"></a>
                                     </td>
@@ -200,7 +200,7 @@
                         <div class="modal-body">
                             <!-- 4:3 aspect ratio -->
                             <div class="embed-responsive embed-responsive-4by3">
-                                <iframe class="embed-responsive-item" src="registrarnivel.jsp"></iframe>
+                                <iframe class="embed-responsive-item" src="ingresanivel.jsp"></iframe>
                             </div>
                         </div>
                         <div class="modal-footer">

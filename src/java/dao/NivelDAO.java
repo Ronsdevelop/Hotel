@@ -45,7 +45,7 @@ public static ArrayList<model.Niveles> listarniveles() {
         }
     }
 
-    public static boolean eliminacliente(model.Niveles niv) {
+    public static boolean eliminanivel(model.Niveles niv) {
         try {
             CallableStatement cs = null;
             Connection con = Conexion.conectar();
@@ -61,11 +61,11 @@ public static ArrayList<model.Niveles> listarniveles() {
         }
     }
 
-    public static model.Niveles getIdcliente(String id) throws SQLException {
+    public static model.Niveles getIdnivel(String id) throws SQLException {
        model.Niveles niv = new model.Niveles();
         try {
             Connection con = dao.Conexion.conectar();
-            PreparedStatement ps = con.prepareStatement("select * from niveles where codigo=?");
+            PreparedStatement ps = con.prepareStatement("select * from niveles where cod_nivel=?");
             ps.setString(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
