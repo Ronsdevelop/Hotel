@@ -48,6 +48,7 @@
 </head>
 <body>
     <div class="row">
+    <div class="container-fluid">
         <div class="col-lg-3">
             <div class="nav-side-menu">
                 <div class="brand">
@@ -144,10 +145,10 @@
         </div>
         
         <div class="col-lg-9">
+        <div class="container-fluid">
                         <div class="sub-menu collapse" id="niveles">
 
             <h1>Niveles</h1>
-               <div class="container">
                 <div class="row" >
                         <table class="table-striped display nowrap" id="tabla">
                             <thead>
@@ -199,7 +200,7 @@
                         <div class="modal-body">
                             <!-- 4:3 aspect ratio -->
                             <div class="embed-responsive embed-responsive-4by3">
-                                <iframe class="embed-responsive-item" src="ingresanivel.jsp"></iframe>
+                                <iframe class="embed-responsive-item" src="registrarnivel.jsp"></iframe>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -213,7 +214,7 @@
             </div>
 
             <!--fin de mi ventana modal-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-        </body>
+            <script src="plugins/DATATABLE/js/popper.min.js" type="text/javascript"></script>
+            <script src="plugins/DATATABLE/js/bootstrap.min.js" type="text/javascript"></script>
+   </body>
     </html>
