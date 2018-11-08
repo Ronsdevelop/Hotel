@@ -72,6 +72,16 @@ public class ingresanivel extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+          String Nivel = request.getParameter("nivel");
+          model.Niveles n = new model.Niveles();
+          n.setNom_nivel(Nivel);
+          if(dao.NivelDAO.registrarNivel(n)){
+            request.setAttribute("mensaje","Nivel registrado");
+        }else{
+            request.setAttribute("mensaje","Error al registrar Nivel");
+        }
+        request.getRequestDispatcher("ingresanivel.jsp").forward(request, response);
+        
         processRequest(request, response);
     }
 

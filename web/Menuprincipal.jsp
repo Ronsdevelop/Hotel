@@ -199,7 +199,7 @@
                         <div class="modal-body">
                             <!-- 4:3 aspect ratio -->
                             <div class="embed-responsive embed-responsive-4by3">
-                                <iframe class="embed-responsive-item" src="registrarnivel.jsp"></iframe>
+                                <iframe class="embed-responsive-item" src="ingresanivel.jsp"></iframe>
                             </div>
                         </div>
                         <div class="modal-footer">

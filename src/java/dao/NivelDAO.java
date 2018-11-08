@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class NivelDAO {
-    public static boolean registrar(model.Niveles n) {
+    public static boolean registrarNivel(model.Niveles n) {
         try {
             CallableStatement cs = null;
             Connection con = Conexion.conectar();
@@ -80,7 +80,7 @@ public static ArrayList<model.Niveles> listarniveles() {
         }
         return niv;
     }
-public static boolean modificarcliente(model.Niveles niv) {
+public static boolean modificarNivel(model.Niveles niv) {
         try {
             CallableStatement cs=null;
             Connection con = dao.Conexion.conectar();
