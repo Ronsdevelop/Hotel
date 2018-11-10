@@ -73,6 +73,7 @@ public class ingresanivel extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
           String Nivel = request.getParameter("nivel");
+          
           model.Niveles n = new model.Niveles();
           n.setNom_nivel(Nivel);
           if(dao.NivelDAO.registrarNivel(n)){

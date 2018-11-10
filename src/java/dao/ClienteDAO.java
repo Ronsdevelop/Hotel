@@ -16,16 +16,16 @@ public class ClienteDAO {
         try {
             CallableStatement cs = null;
             Connection con = Conexion.conectar();
-            CallableStatement sp = con.prepareCall("{call sp_ingresaclientes(?,?,?,?,?,?,?,?,?)}");
+            CallableStatement sp = con.prepareCall("{call sp_ingresaclientes(?,?,?,?,?,?,?,?)}");
             sp.setString(1, C.getNombres());
             sp.setString(2, C.getAppaterno());
             sp.setString(3, C.getApmaterno());
             sp.setString(4, C.getDireccion());            
-            sp.setInt(5, (int) C.getFono());
+            sp.setString(5, C.getFono());
             sp.setString(6, C.getEmail());
-            sp.setInt(7, (int)C.getDni());
-            sp.setString(7, C.getEstado());
-            if (sp.executeUpdate()>0) {
+            sp.setInt(7, C.getDni());
+            sp.setString(8, C.getEstado());
+            if (sp.executeUpdate() > 0) {
                 return true;
             }else{
                 return false;

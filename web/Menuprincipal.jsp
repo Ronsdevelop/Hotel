@@ -101,7 +101,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-wechat fa-lg"></i> Mensajes
+                                <i class="fa fa-wechat fa-lg"></i> Mantenimiento
                             </a>
                         </li>
 

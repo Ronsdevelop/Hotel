@@ -8,6 +8,7 @@ package controller;
 import dao.ClienteDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,7 @@ public class ServletCliente extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-                        throws ServletException, IOException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -59,7 +60,7 @@ public class ServletCliente extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-                        throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -73,17 +74,32 @@ public class ServletCliente extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-                        throws ServletException, IOException {
+            throws ServletException, IOException {
         String nombre = request.getParameter("nom");
         String aPaterno = request.getParameter("apepa");
         String aMaterno = request.getParameter("apema");
         String Direccion = request.getParameter("dir");
-        int Telefono = Integer.parseInt(request.getParameter("fono"));
+        String Telefono = request.getParameter("fono");
         String Email = request.getParameter("email");
-        int Dni = Integer.parseInt(request.getParameter("edni"));
+        int Dni = Integer.parseInt(request.getParameter("dni"));
         String Estado = request.getParameter("est");
-       
-    
+
+        model.Cliente c = new model.Cliente();
+        c.setNombres(nombre);
+        c.setAppaterno(aPaterno);
+        c.setApmaterno(aMaterno);
+        c.setDireccion(Direccion);
+        c.setFono(Telefono);
+        c.setEmail(Email);
+        c.setDni(Dni);
+        c.setEstado(Estado);
+        if (dao.ClienteDAO.RegistrarCliente(c)) {
+            request.setAttribute("mensaje", "Cliente Registrado");
+        } else {
+            request.setAttribute("mensaje", "Cliente no registrado");
+        }
+        request.getRequestDispatcher("RegistrarCliente.jsp").forward(request, response);
+        processRequest(request, response);
 
     }
 

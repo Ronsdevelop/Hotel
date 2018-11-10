@@ -15,7 +15,7 @@ public class Cliente implements Serializable{
     private String appaterno;
     private String apmaterno;
     private String direccion;
-    private int fono;
+    private String fono;
     private String email;
     private int dni;
     private String estado;
@@ -26,13 +26,13 @@ public class Cliente implements Serializable{
         this.appaterno = "";
         this.apmaterno = "";
         this.direccion = "";
-        this.fono = 0;
+        this.fono = "";
         this.email = "";
         this.dni = 0;
         this.estado = "";
     }
 
-    public Cliente(String cod_cliente, String nombres, String appaterno, String apmaterno, String direccion, int fono, String email, int dni, String estado) {
+    public Cliente(String cod_cliente, String nombres, String appaterno, String apmaterno, String direccion, String fono, String email, int dni, String estado) {
         this.cod_cliente = cod_cliente;
         this.nombres = nombres;
         this.appaterno = appaterno;
@@ -84,11 +84,11 @@ public class Cliente implements Serializable{
         this.direccion = direccion;
     }
 
-    public float getFono() {
+    public String getFono() {
         return fono;
     }
 
-    public void setFono(int fono) {
+    public void setFono(String fono) {
         this.fono = fono;
     }
 

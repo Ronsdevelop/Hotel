@@ -19,7 +19,7 @@
                 <div class="col-lg-8">
                     <h4>Registro de Cliente</h4>
 
-                    <form name="form1" method="post" action="#" >
+                    <form name="form1" method="post" action="ServletCliente" >
                         <table class="table" >
                             <tr>
                                 <td><label>Nombres</label></td>
